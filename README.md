@@ -2,21 +2,18 @@
 
 ## SKILLS YOU WILL GAIN:
 
-- Distributed Computing
+* Parallel Computing
 
-- Optimistic Concurrency Control
+** Theory of parallelism: computation graphs, work, span, ideal parallelism, parallel speedup, Amdahl's Law, data races, and determinism
 
-- Parallel Computing:
+** Task parallelism using Java’s ForkJoin framework
 
-•	Theory of parallelism: computation graphs, work, span, ideal parallelism, parallel speedup, Amdahl's Law, data races, and determinism
+** Functional parallelism using Java’s Future and Stream frameworks
 
-•	Task parallelism using Java’s ForkJoin framework
+** Loop-level parallelism with extensions for barriers and iteration grouping (chunking)
 
-•	Functional parallelism using Java’s Future and Stream frameworks
+** Dataflow parallelism using the Phaser framework and data-driven tasks
 
-•	Loop-level parallelism with extensions for barriers and iteration grouping (chunking)
+* Java Concurrency & Optimistic Concurrency Control
 
-•	Dataflow parallelism using the Phaser framework and data-driven tasks
-
-- Java Concurrency
-
+* Distributed Computing
