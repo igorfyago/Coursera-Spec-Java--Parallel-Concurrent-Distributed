@@ -1,7 +1,6 @@
  ## Parallel, Concurrent, & Distributed Programming in Java Specialization - Rice U.
 
 * Parallel Computing
-
 	* Theory of parallelism: computation graphs, Amdahl's Law, data races, determinism
 	* Task parallelism using Java’s ForkJoin framework
 	* Functional parallelism using Java’s Future and Stream frameworks
