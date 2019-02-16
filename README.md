@@ -4,7 +4,7 @@
 
 * Parallel Computing
 
-	* Theory of parallelism: computation graphs, work, span, ideal parallelism, parallel speedup, Amdahl's Law, data races, and determinism
+	* Theory of parallelism: computation graphs, Amdahl's Law, data races, determinism
 	* Task parallelism using Java’s ForkJoin framework
 	* Functional parallelism using Java’s Future and Stream frameworks
 	* Loop-level parallelism with extensions for barriers and iteration grouping (chunking)
@@ -18,4 +18,7 @@
 	* Optimistic Concurrency Control
 
 * Distributed Computing
-	* tbd
+	* Distributed Map reduce
+	* Client server
+	* Message passing
+	* Distributed Multithreading
