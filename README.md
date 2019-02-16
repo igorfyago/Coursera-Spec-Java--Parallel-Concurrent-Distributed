@@ -1,7 +1,5 @@
  # Parallel, Concurrent, and Distributed Programming in Java Specialization
 
-## SKILLS YOU WILL GAIN:
-
 * Parallel Computing
 
 	* Theory of parallelism: computation graphs, Amdahl's Law, data races, determinism
