@@ -1,16 +1,12 @@
 package edu.coursera.concurrent;
 
-import junit.framework.TestCase;
-
-import java.text.DecimalFormat;
-import java.util.Arrays;
-import java.util.Random;
-import java.util.concurrent.CyclicBarrier;
-import java.util.concurrent.BrokenBarrierException;
-import java.util.concurrent.atomic.AtomicLong;
-
 import edu.coursera.concurrent.CoarseLists.CoarseList;
 import edu.coursera.concurrent.CoarseLists.RWCoarseList;
+import junit.framework.TestCase;
+
+import java.util.concurrent.BrokenBarrierException;
+import java.util.concurrent.CyclicBarrier;
+import java.util.concurrent.atomic.AtomicLong;
 
 public class ListSetTest extends TestCase {
     private final int randNumsLength = 10_000;

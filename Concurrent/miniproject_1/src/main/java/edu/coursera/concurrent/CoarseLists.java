@@ -24,8 +24,7 @@ public final class CoarseLists {
          */
 
         private final ReentrantLock lock = new ReentrantLock();
-
-
+        
         /**
          * Default constructor.
          */
@@ -35,12 +34,12 @@ public final class CoarseLists {
 
         /**
          * {@inheritDoc}
-         *
+         * <p>
          * DONE Use a lock to protect against concurrent access.
          */
         @Override
         boolean add(final Integer object) {
-        try {
+            try {
                 lock.lock();
                 Entry pred = this.head;
                 Entry curr = pred.next;
@@ -65,12 +64,12 @@ public final class CoarseLists {
 
         /**
          * {@inheritDoc}
-         *
+         * <p>
          * DONE Use a lock to protect against concurrent access.
          */
         @Override
         boolean remove(final Integer object) {
-        try {
+            try {
                 lock.lock();
                 Entry pred = this.head;
                 Entry curr = pred.next;
@@ -93,7 +92,7 @@ public final class CoarseLists {
 
         /**
          * {@inheritDoc}
-         *
+         * <p>
          * DONE Use a lock to protect against concurrent access.
          */
         @Override
@@ -112,6 +111,7 @@ public final class CoarseLists {
                 lock.unlock();
             }
         }
+    }
 
     /**
      * An implementation of the ListSet interface that uses Java read-write
@@ -142,66 +142,84 @@ public final class CoarseLists {
         /**
          * {@inheritDoc}
          *
-         * TODO Use a read-write lock to protect against concurrent access.
+         * DONE Use a read-write lock to protect against concurrent access.
          */
         @Override
-        boolean add(final Integer object) {
-            Entry pred = this.head;
-            Entry curr = pred.next;
+        boolean add(final Integer object)  {
 
-            while (curr.object.compareTo(object) < 0) {
-                pred = curr;
-                curr = curr.next;
-            }
+        try {
+                readWriteLock.writeLock().lock();
+                Entry pred = this.head;
+                Entry curr = pred.next;
 
-            if (object.equals(curr.object)) {
-                return false;
-            } else {
-                final Entry entry = new Entry(object);
-                entry.next = curr;
-                pred.next = entry;
-                return true;
+                while (curr.object.compareTo(object) < 0) {
+                    pred = curr;
+                    curr = curr.next;
+                }
+
+                if (object.equals(curr.object)) {
+                    return false;
+                } else {
+                    final Entry entry = new Entry(object);
+                    entry.next = curr;
+                    pred.next = entry;
+                    return true;
+                }
+            } finally {
+                readWriteLock.writeLock().unlock();
             }
         }
+
 
         /**
          * {@inheritDoc}
          *
-         * TODO Use a read-write lock to protect against concurrent access.
+         * DONE Use a read-write lock to protect against concurrent access.
          */
         @Override
         boolean remove(final Integer object) {
-            Entry pred = this.head;
-            Entry curr = pred.next;
+        try {
+                readWriteLock.writeLock().lock();
+                Entry pred = this.head;
+                Entry curr = pred.next;
 
-            while (curr.object.compareTo(object) < 0) {
-                pred = curr;
-                curr = curr.next;
-            }
+                while (curr.object.compareTo(object) < 0) {
+                    pred = curr;
+                    curr = curr.next;
+                }
 
-            if (object.equals(curr.object)) {
-                pred.next = curr.next;
-                return true;
-            } else {
-                return false;
+                if (object.equals(curr.object)) {
+                    pred.next = curr.next;
+                    return true;
+                } else {
+                    return false;
+                }
+            } finally {
+                readWriteLock.writeLock().unlock();
             }
         }
 
         /**
          * {@inheritDoc}
          *
-         * TODO Use a read-write lock to protect against concurrent access.
+         * DONE Use a read-write lock to protect against concurrent access.
          */
         @Override
         boolean contains(final Integer object) {
-            Entry pred = this.head;
-            Entry curr = pred.next;
+        try {
+                readWriteLock.readLock().lock();
 
-            while (curr.object.compareTo(object) < 0) {
-                pred = curr;
-                curr = curr.next;
+                Entry pred = this.head;
+                Entry curr = pred.next;
+
+                while (curr.object.compareTo(object) < 0) {
+                    pred = curr;
+                    curr = curr.next;
+                }
+                return object.equals(curr.object);
+            } finally {
+                readWriteLock.readLock().unlock();
             }
-            return object.equals(curr.object);
         }
     }
 }
