@@ -1,4 +1,4 @@
- ## Parallel, Concurrent, & Distributed Programming in Java - Specialization - Rice University
+ ## Parallel, Concurrent, & Distributed Programming in Java Specialization - Rice U.
 
 * Parallel Computing
 
