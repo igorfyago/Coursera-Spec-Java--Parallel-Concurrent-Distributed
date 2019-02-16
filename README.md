@@ -1,4 +1,4 @@
-# Parallel, Concurrent, and Distributed Programming in Java Specialization
+ # Parallel, Concurrent, and Distributed Programming in Java Specialization
 
 ## SKILLS YOU WILL GAIN:
 
@@ -14,6 +14,11 @@
 
 	* Dataflow parallelism using the Phaser framework and data-driven tasks
 
-* Java Concurrency & Optimistic Concurrency Control
+* Concurrent Programming:
+	* Threads and locks
+	* Critical sections and isolation
+	* Actors
+	* Concurrent data structures
+	* Optimistic Concurrency Control
 
 * Distributed Computing
