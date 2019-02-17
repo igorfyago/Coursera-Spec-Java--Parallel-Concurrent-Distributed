@@ -24,7 +24,7 @@ public final class CoarseLists {
          */
 
         private final ReentrantLock lock = new ReentrantLock();
-        
+
         /**
          * Default constructor.
          */

@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="b2ee6e0c-ce59-4f40-bc85-9d3bcf963105" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/edu/coursera/concurrent/CoarseLists$CoarseList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/edu/coursera/concurrent/CoarseLists$CoarseList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/edu/coursera/concurrent/CoarseLists$RWCoarseList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/edu/coursera/concurrent/CoarseLists$RWCoarseList.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/coursera/concurrent/CoarseLists.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/coursera/concurrent/CoarseLists.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/edu/coursera/concurrent/ListSetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/edu/coursera/concurrent/ListSetTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/test.iml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,11 +18,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/coursera/concurrent/CoarseLists.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
-              <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/edu/coursera/concurrent/ListSetTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="35" column="16" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -166,15 +178,20 @@
     <history-entry file="ListSetTest - 2019.02.16 at 21h 57m 50s.xml">
       <configuration name="ListSetTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ListSetTest - 2019.02.16 at 23h 29m 02s.xml">
+      <configuration name="ListSetTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ListSetTest - 2019.02.16 at 23h 51m 06s.xml">
+      <configuration name="ListSetTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Designer" />
       <window_info id="UI Designer" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2342282" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2342282" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Terminal" />
@@ -182,8 +199,8 @@
       <window_info anchor="bottom" id="Messages" weight="0.32960895" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33519554" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.33519554" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39944133" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -250,16 +267,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/edu/coursera/concurrent/ListSetTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="35" column="16" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/edu/coursera/concurrent/AddTestThread.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -270,7 +277,17 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/coursera/concurrent/CoarseLists.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
-          <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/edu/coursera/concurrent/ListSetTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="35" column="16" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
