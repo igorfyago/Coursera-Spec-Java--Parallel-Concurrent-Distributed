@@ -31,3 +31,25 @@ Lecture Summary: In this lecture, we studied Atomic Variables, an important spec
 However, instead of using object-based isolation, we can declare the index cur to be an Atomic Integer variable and use an atomic operation called getAndAdd() to atomically read the current value of cur and increment its value by 1. Thus, \mathtt{j = cur.getAndAdd(1)}j=cur.getAndAdd(1) has the same semantics as \mathtt{isolated}isolated \mathtt{(cur)}(cur) { \mathtt{ j = cur; cur = cur+1;}j=cur;cur=cur+1; } but is implemented much more efficiently using hardware support on today’s machines.
 
 Another example that we studied in the lecture concerns Atomic Reference variables, which are reference variables that can be atomically read and modified using methods such as compareAndSet(). If we have an atomic reference ref, then the call to ref.compareAndSet(expected, new) will compare the value of ref to expected, and if they are the same, set the value of ref to new and return true. This all occurs in one atomic operation that cannot be interrupted by any other methods invoked on the ref object. If ref and expected have different values, compareAndSet() will not modify anything and will simply return false.
+
+
+Actors:
+
+- reactive to messages
+- async / non-determinst
+- objects are isolated
+- patterns: stream+filter+stream pipelines
+
+public void process(final Object msg) {
+  int candidate = (Integer) msg;
+  // Check if the candidate is a non-multiple of the "local prime".
+  // For example, localPrime = 2 in the Non-Mul-2 actor
+  boolean nonMul = ((candidate % localPrime) != 0);
+  // nothing needs to be done if nonMul = false
+  if (nonMul) {
+    if (nextActor == null) { 
+      . . . // create & start new actor with candidate as its local prime
+    }
+    else nextActor.send(msg); // forward message to next actor
+  } 
+} // process
