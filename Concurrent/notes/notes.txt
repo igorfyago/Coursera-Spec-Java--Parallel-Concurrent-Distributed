@@ -40,6 +40,8 @@ Actors:
 - objects are isolated
 - patterns: stream+filter+stream pipelines
 
+sieve of e.
+
 public void process(final Object msg) {
   int candidate = (Integer) msg;
   // Check if the candidate is a non-multiple of the "local prime".
@@ -53,3 +55,9 @@ public void process(final Object msg) {
     else nextActor.send(msg); // forward message to next actor
   } 
 } // process
+
+
+producer->consumer:
+
+-unbounded: p can insert to buffer, c will inform buffer it is ready to take on work
+-bounded: buffer will request to p so that capacity is not exceded
