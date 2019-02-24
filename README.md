@@ -51,7 +51,7 @@
 		* 3.3 Sieve of Eratosthenes Algorithm
 		* 3.4 Producer-Consumer Problem
 		* 3.5 Bounded Buffer Problem
-		* Mini Project 3: Sieve of Eratosthenes Using Actor Parallelism10m
+		* Mini Project 3: Sieve of Eratosthenes Using Actor Parallelism
 	* CONCURRENT DATA STRUCTURES
 		* 4.1 Optimistic Concurrency
 		* 4.2 Concurrent Queue
